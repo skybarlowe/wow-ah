@@ -1,2 +1,2 @@
 # wow-ah
-World of Warcraft - Auction house
+World of Warcraft - Auction House
