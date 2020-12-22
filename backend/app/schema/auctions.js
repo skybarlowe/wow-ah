@@ -1,7 +1,7 @@
 const types = ``;
 
 const queries = `
-  auctions(connectedRealmId: ID): [Auction]
+  auctions(connectedRealmId: ID): [Auction] @cacheControl(maxAge: 3600)
 `;
 
 module.exports = {

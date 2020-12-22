@@ -5,7 +5,7 @@ const types = `
 `;
 
 const queries = `
-  realms: [RealmData]
+  realms: [RealmData] @cacheControl(maxAge: 86400)
 `;
 
 module.exports = {

@@ -11,7 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "apollo-datasource-rest": "^0.9.5",
-    "apollo-server-cache-memcached": "^0.6.6",
     "apollo-server-express": "^2.19.0",
     "body-parser": "^1.19.0",
     "chalk": "^4.1.0",

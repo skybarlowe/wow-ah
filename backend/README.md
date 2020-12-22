@@ -1,5 +1,5 @@
 # Blizzard API Service
-GraphQL interface for queries to Blizzard API with Memcached setup.
+GraphQL interface for queries to Blizzard API with cacheControl setup.
 
 ## Usage
 First, install packages:
