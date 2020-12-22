@@ -3,7 +3,7 @@ GraphQL interface for queries to Blizzard API with cacheControl setup.
 
 ## Usage
 First, install packages:
-```
+```bash
 npm install
 ```
 
@@ -15,7 +15,7 @@ REGION=<region>
 ```
 
 Then, start server:
-```
+```bash
 npm start
 ```
 
@@ -24,7 +24,7 @@ When server is up, go to http://localhost:4000/graphql and test your queries.
 
 ### Realms list
 Get connected realms list.
-```
+```graphql
 {
   realms {
     data {
@@ -42,7 +42,7 @@ Get connected realms list.
 
 ### Auctions
 Get auctions from given realm.
-```
+```graphql
 {
   auctions(connectedRealmId: 1379) {
     id
@@ -60,7 +60,7 @@ Get auctions from given realm.
 
 ### Item
 Get item
-```
+```graphql
 {
   item(itemId: 183706) {
     id
