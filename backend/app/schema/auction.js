@@ -4,12 +4,15 @@ const types = `
     item: AuctionItem
     buyout: Float # "GraphQLError: Int cannot represent non 32-bit signed integer value"
     quantity: Int
+    unit_price: Float
     time_left: String
   }
 
   type AuctionItem {
     id: ID
+    context: Int
     modifiers: [AuctionItemMod]
+    bonus_lists: [Int]
   }
 
   type AuctionItemMod {

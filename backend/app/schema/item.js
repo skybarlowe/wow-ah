@@ -69,7 +69,7 @@ const types = `
 `;
 
 const queries = `
-  item(itemId: ID): Item @cacheControl(maxAge: 86400)
+  item(itemId: ID): Item @cacheControl(maxAge: 2592000)
 `;
 
 module.exports = {
