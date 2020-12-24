@@ -32,39 +32,57 @@
     </nav>
     <!-- main container -->
     <div class="container-fluid">
-        <div class="row">
+        <div class="row text-center">
             <!-- Menu lateral -->
             <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <ul class="list-unstyled components">
-                    <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Weapons</a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a href="#">Swords</a>
-                            </li>
-                            <li>
-                                <a href="#">Axes</a>
-                            </li>
-                            <li>
-                                <a href="#">Staves</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Armor</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="#">Cloth</a>
-                            </li>
-                            <li>
-                                <a href="#">Leather</a>
-                            </li>
-                            <li>
-                                <a href="#">Malle</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div id="myGroup" class="flex-column mx-auto"> 
+                    <button href="#weaponsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Weapons</button>
+                    <div class="collapse list-unstyled" id="weaponsSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark " href="#" role="button">Swords</a>
+                            <a class="btn btn-dark" href="#" role="button">Axes</a>
+                            <a class="btn btn-dark" href="#" role="button">Staves</a>
+                    </div>
+                    <button href="#armorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Armor</button>
+                    <div class="collapse list-unstyled" id="armorSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                    <button href="#containersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Containers</button>
+                    <div class="collapse list-unstyled" id="containersSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                    <button href="#gemsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Gems</button>
+                    <div class="collapse list-unstyled" id="gemsSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                    <button href="#itemEnhancementsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Item Enhancements</button>
+                    <div class="collapse list-unstyled" id="itemEnhancementsSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                    <button href="#consumablesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Consumables</button>
+                    <div class="collapse list-unstyled" id="consumablesSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                    <button href="#glyphsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Glyphs</button>
+                    <div class="collapse list-unstyled" id="glyphsSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                    <button href="#tradeGoodsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Trade Goods</button>
+                    <div class="collapse list-unstyled" id="tradeGoodsSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                    <button href="#recipesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Recipes</button>
+                    <div class="collapse list-unstyled" id="recipesSubmenu" data-parent="#myGroup">
+                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
+                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    </div>
+                </div>
             </nav>
             <!-- Item table -->
             <main class="col-12 col-md-9 col-xl-8" role="main">
