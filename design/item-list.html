@@ -8,7 +8,7 @@
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="./style/style.css">
+        <!-- <link rel="stylesheet" href="./style/style.css"> -->
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <!-- Popper.JS -->
@@ -23,7 +23,6 @@
     </head>
     <body>
     <!-- Top nav-bar -->
-    <!-- <top-nav-component></top-nav-component> -->
     <nav class="navbar navbar-dark bg-dark justify-content-center">
         <form class="form-inline">
             <input class="form-control form-control-dark mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -31,11 +30,11 @@
         </form>
     </nav>
     <!-- main container -->
-    <div class="container-fluid">
-        <div class="row text-center">
+    <div class="container-sm">
+        <div class="row">
             <!-- Menu lateral -->
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div id="myGroup" class="flex-column mx-auto"> 
+            <nav class="col-2 bg-dark sidebar d-grid gap-2">
+                <div id="myGroup" class="d-grid gap-2"> 
                     <button href="#weaponsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Weapons</button>
                     <div class="collapse list-unstyled" id="weaponsSubmenu" data-parent="#myGroup">
                             <a class="btn btn-dark " href="#" role="button">Swords</a>
@@ -85,7 +84,7 @@
                 </div>
             </nav>
             <!-- Item table -->
-            <main class="col-12 col-md-9 col-xl-8" role="main">
+            <main class="col-12 col-md-9 col-xl-8">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <table class="table table-hover">
                         <thead>
