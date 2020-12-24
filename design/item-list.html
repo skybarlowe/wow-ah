@@ -1,66 +1,191 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="/frontend/components/top-nav.js" type="text/javascript" defer></script>
-    <script src="/frontend/components/footer.js" type="text/javascript" defer></script>
-    <!-- Wowhead Tooltips -->
-    <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
-    <script src="https://wow.zamimg.com/widgets/power.js"></script>
-  
-    <title>Item List</title>
-  </head>
-  <body>
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="./style/style.css">
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- Wowhead Tooltips -->
+        <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+        <script src="https://wow.zamimg.com/widgets/power.js"></script>
+    
+        <title>Item List</title>
+    </head>
+    <body>
     <!-- Top nav-bar -->
-    <top-nav-component></top-nav-component>
+    <!-- <top-nav-component></top-nav-component> -->
+    <nav class="navbar navbar-dark bg-dark justify-content-center">
+        <form class="form-inline">
+            <input class="form-control form-control-dark mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    <!-- main container -->
     <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
+        <div class="row">
             <!-- Menu lateral -->
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-                <button data-toggle="collapse" data-target="#demo">Collapsible</button>
-                <div id="demo" class="collapse">
-                    <p>hola</p> 
-                </div>
-            </div>
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Weapons</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Swords</a>
+                            </li>
+                            <li>
+                                <a href="#">Axes</a>
+                            </li>
+                            <li>
+                                <a href="#">Staves</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Armor</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Cloth</a>
+                            </li>
+                            <li>
+                                <a href="#">Leather</a>
+                            </li>
+                            <li>
+                                <a href="#">Malle</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
             <!-- Item table -->
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Price</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Available</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">200</th>
-                            <td>Sword Sword Sword Sword Sword </td>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">10000</th>
-                            <td>Pet</td>
-                            <td>24</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Enchant</td>
-                            <td>10</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <main class="col-12 col-md-9 col-xl-8" role="main">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Price</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Available</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">200</th>
+                                <td>Sword Sword Sword Sword Sword </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10000</th>
+                                <td>Pet</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Enchant</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">200</th>
+                                <td>Sword Sword Sword Sword Sword </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10000</th>
+                                <td>Pet</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Enchant</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">200</th>
+                                <td>Sword Sword Sword Sword Sword </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10000</th>
+                                <td>Pet</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Enchant</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">200</th>
+                                <td>Sword Sword Sword Sword Sword </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10000</th>
+                                <td>Pet</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Enchant</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">200</th>
+                                <td>Sword Sword Sword Sword Sword </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10000</th>
+                                <td>Pet</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Enchant</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">200</th>
+                                <td>Sword Sword Sword Sword Sword </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10000</th>
+                                <td>Pet</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Enchant</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">200</th>
+                                <td>Sword Sword Sword Sword Sword </td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10000</th>
+                                <td>Pet</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Enchant</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </main>
         </div>
     </div>
