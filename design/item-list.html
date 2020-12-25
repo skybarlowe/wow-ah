@@ -8,205 +8,206 @@
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <!-- Our Custom CSS -->
-        <!-- <link rel="stylesheet" href="./style/style.css"> -->
+        <link rel="stylesheet" href="./style/simple-sidebar.css">
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <!-- Popper.JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <!-- Bootstrap JS -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- Icons Bootstrap -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha512-77kidyGDJGWWmJ0MVO0CRp+6nRgZRK67frUVBRvnL1zCcmcw9FkCQxpDHq52SebW+KWTAnnuX0Qk2/MQWogWoQ==" crossorigin="anonymous" />
         <!-- Wowhead Tooltips -->
         <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
         <script src="https://wow.zamimg.com/widgets/power.js"></script>
     
-        <title>Item List</title>
+        <title>Test item list</title>
     </head>
     <body>
-    <!-- Top nav-bar -->
-    <nav class="navbar navbar-dark bg-dark justify-content-center">
-        <form class="form-inline">
-            <input class="form-control form-control-dark mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
-    <!-- main container -->
-    <div class="container-sm">
-        <div class="row">
-            <!-- Menu lateral -->
-            <nav class="col-2 bg-dark sidebar d-grid gap-2">
-                <div id="myGroup" class="d-grid gap-2"> 
-                    <button href="#weaponsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Weapons</button>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="bg-dark border-right" id="sidebar-wrapper">
+                <div class="list-group list-group-flush" id="myGroup">
+                    <a href="#weaponsSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-dark text-warning" >Weapons</a>
                     <div class="collapse list-unstyled" id="weaponsSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark " href="#" role="button">Swords</a>
-                            <a class="btn btn-dark" href="#" role="button">Axes</a>
-                            <a class="btn btn-dark" href="#" role="button">Staves</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Swords</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Axes</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Staves</a>
                     </div>
-                    <button href="#armorSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Armor</button>
+                    <a href="#armorSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-dark text-warning" >Armor</a>
                     <div class="collapse list-unstyled" id="armorSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#" >Cloth</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#" >Leather</a>
                     </div>
-                    <button href="#containersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Containers</button>
+                    <a href="#containersSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-dark text-warning">Containers</a>
                     <div class="collapse list-unstyled" id="containersSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Cloth</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Leather</a>
                     </div>
-                    <button href="#gemsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Gems</button>
+                    <a href="#gemsSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-dark text-warning">Gems</a>
                     <div class="collapse list-unstyled" id="gemsSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Cloth</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Leather</a>
                     </div>
-                    <button href="#itemEnhancementsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Item Enhancements</button>
+                    <a href="#itemEnhancementsSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-dark text-warning">Item Enhancements</a>
                     <div class="collapse list-unstyled" id="itemEnhancementsSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Cloth</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Leather</a>
                     </div>
-                    <button href="#consumablesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Consumables</button>
+                    <a href="#consumablesSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-dark text-warning">Consumables</a>
                     <div class="collapse list-unstyled" id="consumablesSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Cloth</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Leather</a>
                     </div>
-                    <button href="#glyphsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Glyphs</button>
-                    <div class="collapse list-unstyled" id="glyphsSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
-                    </div>
-                    <button href="#tradeGoodsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Trade Goods</button>
-                    <div class="collapse list-unstyled" id="tradeGoodsSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
-                    </div>
-                    <button href="#recipesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-dark text-warning">Recipes</button>
-                    <div class="collapse list-unstyled" id="recipesSubmenu" data-parent="#myGroup">
-                            <a class="btn btn-dark" href="#" role="button">Cloth</a>
-                            <a class="btn btn-dark" href="#" role="button">Leather</a>
+                    <a href="#GlyphsSubmenu" data-toggle="collapse" aria-expanded="false" class="list-group-item list-group-item-action bg-dark text-warning">Glyphs</a>
+                    <div class="collapse list-unstyled" id="GlyphsSubmenu" data-parent="#myGroup">
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Cloth</a>
+                        <a class="list-group-item list-group-item-action bg-dark text-white" href="#">Leather</a>
                     </div>
                 </div>
-            </nav>
-            <!-- Item table -->
-            <main class="col-12 col-md-9 col-xl-8">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Price</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Available</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">200</th>
-                                <td>Sword Sword Sword Sword Sword </td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10000</th>
-                                <td>Pet</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Enchant</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">200</th>
-                                <td>Sword Sword Sword Sword Sword </td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10000</th>
-                                <td>Pet</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Enchant</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">200</th>
-                                <td>Sword Sword Sword Sword Sword </td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10000</th>
-                                <td>Pet</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Enchant</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">200</th>
-                                <td>Sword Sword Sword Sword Sword </td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10000</th>
-                                <td>Pet</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Enchant</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">200</th>
-                                <td>Sword Sword Sword Sword Sword </td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10000</th>
-                                <td>Pet</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Enchant</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">200</th>
-                                <td>Sword Sword Sword Sword Sword </td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10000</th>
-                                <td>Pet</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Enchant</td>
-                                <td>10</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">200</th>
-                                <td>Sword Sword Sword Sword Sword </td>
-                                <td>12</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">10000</th>
-                                <td>Pet</td>
-                                <td>24</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Enchant</td>
-                                <td>10</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </main>
+            </div>
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+                    <button class="btn btn-light" id="menu-toggle"><i class="bi bi-menu-app"></i></button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <input class="form-control form-control-dark mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                        </ul>
+                    </div>
+                </nav>
+        
+              <div class="container-fluid">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Price</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Available</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Sword Sword Sword Sword Sword </td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10000</th>
+                            <td>Pet</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enchant</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Sword Sword Sword Sword Sword </td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10000</th>
+                            <td>Pet</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enchant</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Sword Sword Sword Sword Sword </td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10000</th>
+                            <td>Pet</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enchant</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Sword Sword Sword Sword Sword </td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10000</th>
+                            <td>Pet</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enchant</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Sword Sword Sword Sword Sword </td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10000</th>
+                            <td>Pet</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enchant</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Sword Sword Sword Sword Sword </td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10000</th>
+                            <td>Pet</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enchant</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">200</th>
+                            <td>Sword Sword Sword Sword Sword </td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10000</th>
+                            <td>Pet</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enchant</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
         </div>
-    </div>
-    <!-- footer -->
-    <footer-component></footer-component>
-  </body>
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
+    </body>
 </html>
