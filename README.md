@@ -9,3 +9,7 @@ Pasos lógicos:
 4.- Backend.
 5.- Diseño.  
 6.- Frontend.
+
+## Resources
+
+https://www.wowhead.com/tooltips
