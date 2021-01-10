@@ -1,6 +1,6 @@
 export default function Sidebar() {
   return (
-    <div className="bg-dark border-right" id="sidebar-wrapper">
+    // <div className="bg-dark border-right" id="sidebar-wrapper">
       <div className="list-group list-group-flush" id="myGroup">
         <a href="#weaponsSubmenu" data-toggle="collapse" aria-expanded="false" className="list-group-item list-group-item-action bg-dark text-warning"> Weapons </a>
         <div className="collapse list-unstyled" id="weaponsSubmenu" data-parent="#myGroup">
@@ -39,6 +39,6 @@ export default function Sidebar() {
           <a className="list-group-item list-group-item-action bg-dark text-white" href="#"> Leather</a>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
