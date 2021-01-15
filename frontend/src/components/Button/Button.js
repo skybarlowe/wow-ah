@@ -1,6 +1,11 @@
-export default function Button(){
+export default function Button({className, id, icon, text}){
+    const clickHandler = () => {
+        alert('Hi');
+    }
+
     return (
-        // <button class="btn btn-light" id="menu-toggle"><i class="fa fa-bars"></i></button>
-        <button></button>
+        <div>
+            <button type="button" onClick={clickHandler} className={className} id={id}><i className={icon}>{text}</i></button>
+        </div>
     );
 }
