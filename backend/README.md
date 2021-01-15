@@ -73,3 +73,5 @@ Get item
   }
 }
 ```
+
+API clients are limited to 36,000 requests per hour at a rate of 100 requests per second. Exceeding the hourly quota results in slower service until traffic decreases. Exceeding the per-second limit results in a 429 error for the remainder of the second until the quota refreshes.

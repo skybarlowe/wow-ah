@@ -1,26 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import ITEMS from "../items.json";
 
-import { Navbar, Sidebar, Table} from '../components';
-
-  const colPrice = "Price";
-  const colName = "Item name";
-  const colAvailable = "Available";
-
-  const items = [{
-    id: 107264,
-    price: 500,
-    name: "sword",
-    available: 12,
-  },
-  {
-    id: 107264,
-    price: 5000,
-    name: "Shell",
-    available: 24,
-  }
-];
+import fetch from "../fetch";
+import { Navbar, Sidebar, Table } from "../components";
 
 export default function AuctionHouse() {
+  const [items, setItems] = useState([]);
+  // console.log(items);
+  useEffect(() => {
+    fetch().then((items) => {
+      setItems(items);
+    });
+  }, []);
+
   return (
     <div className="d-flex" id="wrapper">
       {/* Sidebar */}
@@ -30,24 +22,9 @@ export default function AuctionHouse() {
       {/* Page Content */}
       <div id="page-content-wrapper">
         <Navbar />
-      <div className="container-fluid">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">{colPrice}</th>
-              <th scope="col">{colName}</th>
-              <th scope="col">{colAvailable}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {items.map((item) => { 
-              return (
-                <Table {...item} />
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+        <div className="container-fluid">
+          <Table items={items} />
+        </div>
       </div>
     </div>
   );
