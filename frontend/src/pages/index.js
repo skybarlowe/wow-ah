@@ -1,3 +1,5 @@
-import AuctionHouse from './AuctionHouse.page';
+// import AuctionHouse from './AuctionHouse.page';
+import RealmList from "./RealmList.page";
 
-export { AuctionHouse };
+// export { AuctionHouse };
+export { RealmList };
