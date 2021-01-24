@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Uldum"
+  },
+  {
+    "id": 2,
+    "name": "Zul'Jin"
+  },
+  {
+    "id": 3,
+    "name": "Sanguino"
+  },
+  {
+    "id": 4,
+    "name": "Shen'dralar"
+  },
+  {
+    "id": 5,
+    "name": "Dun'Modr"
+  },
+  {
+    "id": 6,
+    "name": "Los Errantes"
+  },
+  {
+    "id": 7,
+    "name": "Colinas Pardas"
+  },
+  {
+    "id": 8,
+    "name": "Tyrande"
+  }
+]
