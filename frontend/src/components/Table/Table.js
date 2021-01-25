@@ -1,17 +1,17 @@
-export default function Table({ items }) {
+export default function Table() {
   return (
     <table className="table table-hover">
       <thead>
         <tr>
-          <th>Realm</th>
+          <th>Tabla</th>
         </tr>
       </thead>
       <tbody>
-        {items.map((item) => (
+        {/* {items.map((item) => (
           <tr key={item.id}>
             <td>{item.name}</td>
           </tr>
-        ))}
+        ))} */}
       </tbody>
     </table>
   );
