@@ -1,6 +1,9 @@
 import { Navbar, Table } from "../components";
 import { useState, useEffect } from "react";
 import realmList from "../realmList.json";
+import Autosuggest from "react-bootstrap-autosuggest";
+
+<script src="path-to-dist/react-bootstrap-autosuggest.min.js"></script>;
 
 export default function RealmList() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,14 +24,8 @@ export default function RealmList() {
   return (
     <div className="d-flex" id="wrapper">
       <div id="page-content-wrapper">
-        <Navbar value={searchTerm} onChange={handleChange} />
+        <Navbar value={searchTerm} />
         <div className="container-fluid ">
-          <input
-            type="text"
-            placeholder="Search"
-            value={searchTerm}
-            onChange={handleChange}
-          />
           <Table items={searchResults} />
         </div>
       </div>

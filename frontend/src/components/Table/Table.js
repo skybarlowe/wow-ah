@@ -1,4 +1,4 @@
-export default function Table({ items, searchTerm, handleChange }) {
+export default function Table({ items }) {
   return (
     <table className="table table-hover">
       <thead>
