@@ -1,13 +1,13 @@
 import { Navbar } from "../components";
-import realmList from "../realmList.json";
-
-<script src="path-to-dist/react-bootstrap-autosuggest.min.js"></script>;
+import RealmSuggest from "../components/RealmSuggest";
 
 export default function RealmList() {
   return (
-    <div className="d-flex" id="wrapper">
+    <div className="d-flex">
       <div id="page-content-wrapper">
-        <Navbar />
+        <div className="">
+          <RealmSuggest />
+        </div>
       </div>
     </div>
   );
