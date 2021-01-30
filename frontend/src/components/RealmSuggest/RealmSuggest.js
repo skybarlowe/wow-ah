@@ -49,20 +49,26 @@ class RealmSuggest extends React.Component {
     const { value, suggestions } = this.state;
 
     const inputProps = {
-      placeholder: "Write a realmlist",
+      placeholder: "Search realmlist",
       value,
       onChange: this.onChange,
     };
 
     return (
-      <Autosuggest
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
-      />
+      <nav className="navbar-nav navbar-expand-sm navbar-dark bg-dark">
+        <ul className="navbar-nav m-2">
+          <li class="nav-item">
+            <Autosuggest
+              suggestions={suggestions}
+              onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+              onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+              getSuggestionValue={getSuggestionValue}
+              renderSuggestion={renderSuggestion}
+              inputProps={inputProps}
+            />
+          </li>
+        </ul>
+      </nav>
     );
   }
 }
