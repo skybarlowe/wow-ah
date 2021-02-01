@@ -13,6 +13,7 @@ export default function RealmList() {
         </div>
       </div> */}
       <div>
+        {/* <Navbar /> */}
         <RealmSuggest />
       </div>
       {/* <Navbar props={RealmSuggest} /> */}
